@@ -9,10 +9,15 @@ void tela_principal(void);
 void tela_cliente(void);
 void cadastra_cliente(void);
 void pesquisa_cliente(void);
-void altera_cliente(void);
+void atualiza_cliente(void);
 void exclui_cliente(void);
 
 void tela_veiculo(void);
+void cadastra_veiculo(void);
+void pesquisa_veiculo(void);
+void atualiza_veiculo(void);
+void exclui_veiculo(void);
+
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -23,10 +28,15 @@ int main(void) {
     tela_cliente();
     cadastra_cliente();
     pesquisa_cliente();
-    altera_cliente();
+    atualiza_cliente();
     exclui_cliente();
 
     tela_veiculo();
+    cadastra_veiculo();
+    pesquisa_veiculo();
+    atualiza_veiculo();
+    exclui_veiculo();
+    
     tela_sobre();
     tela_equipe();
     return 0;
@@ -84,7 +94,7 @@ void cadastra_cliente(void) {
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Menu Cliente                                 |\n");
+    printf("|                                Cadastrar Cliente                            |\n");
     printf("|                                                                             |\n");
     printf("| Nome Completo:                                                              |\n");
     printf("| CPF (Apenas Números):                                                       |\n");
@@ -105,24 +115,25 @@ void pesquisa_cliente(void) {
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Menu Cliente                                 |\n");
+    printf("|                                Pesquisar Cliente                            |\n");
     printf("|                                                                             |\n");
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+
     getchar();
     printf("\n");
 }
 
-void altera_cliente(void) {
+void atualiza_cliente(void) {
     system("clear||cls");		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Menu Cliente                                 |\n");
+    printf("|                         Atualizar o Cadastro do Cliente                     |\n");
     printf("|                                                                             |\n");
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
@@ -139,7 +150,7 @@ void exclui_cliente(void) {
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Menu Cliente                                 |\n");
+    printf("|                         Excluir Cliente do Sistema                          |\n");
     printf("|                                                                             |\n");
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
@@ -170,7 +181,95 @@ void tela_veiculo(void) {
     getchar(); 
 } 
 
-void tela_sobre(void) {
+void cadastra_veiculo(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                              Cadastrar Veículo                              |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe a Placa:                                                            |\n");
+    printf("| Marca:                                                                      |\n");
+    printf("| Modelo:                                                                     |\n");
+    printf("| Ano de fabricação:                                                          |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}  
+
+void pesquisa_veiculo(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                           Pesquisar Dados do Veículo                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe a Placa:                                                            |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+} 
+
+void atualiza_veiculo(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                          Atualizar Dados do Veículo                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe a Placa:                                                            |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}  
+
+void exclui_veiculo(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                          Excluir Veículo do Sistema                         |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe a Placa:                                                            |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+} 
+
+void tela_sobre(void) { 
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -178,19 +277,18 @@ void tela_sobre(void) {
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                    Sistema de Gestão Para Concessionária                    |\n");
-    printf("|                                                                             |\n");
     printf("| Programa universitário da disciplina de PROGRAMAÇÃO (DCT1106) da UFRN.      |\n");
     printf("| Escrito na linguagem de programação C, fornecendo uma plataforma de gestão  |\n");
     printf("| para uma concessionária de veículos, com interfaces intuitivas divididas em |\n");
     printf("| módulos como os de clientes, veículos e funcionários. O objetivo principal  |\n");
     printf("| é ajudar pequenas e médias empresas a melhorar a eficiência e modernizar    |\n");
-    printf("| seus processos de gestão, seja implementando, atualizando ou otimizando     |\n");                                                        
+    printf("| seus processos de gestão, seja implementando, atualizando ou otimizando     |\n");
     printf("| suas operações.                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar();
-    printf("\n");
-}
+} 
 
 void tela_equipe(void) {
     system("clear||cls");
@@ -213,5 +311,6 @@ void tela_equipe(void) {
     getchar();
     printf("\n");
 }
+
 
 
