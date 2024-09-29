@@ -1,6 +1,7 @@
 #include <stdio.h> 
+#include <stdlib.h>
 
-// Projeto V1.08
+// Projeto V2.58
 
 // ################################
 // Assinatura das Funções
@@ -34,6 +35,7 @@ int main(void) {
 // Funções
 
 void tela_principal(void) {
+    system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -48,10 +50,13 @@ void tela_principal(void) {
     printf("| 5. Módulo Relatórios                                                        |\n");
     printf("| 0. Sair                                                                     |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
 void tela_cliente(void) {
+    system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -65,10 +70,13 @@ void tela_cliente(void) {
     printf("| 4. Excluir Cliente                                                          |\n");
     printf("| 0. Voltar ao Menu                                                           |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
-void cadastra_cliente(void) {		
+void cadastra_cliente(void) {	
+    system("clear||cls");	
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -84,10 +92,13 @@ void cadastra_cliente(void) {
     printf("| E-mail:                                                                     |\n");
     printf("| Endereço: (Cidade, Bairro, Rua e Número)                                    |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
-void pesquisa_cliente(void) {		
+void pesquisa_cliente(void) {	
+    system("clear||cls");	
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -98,10 +109,13 @@ void pesquisa_cliente(void) {
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
-void altera_cliente(void) {		
+void altera_cliente(void) {
+    system("clear||cls");		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -112,10 +126,13 @@ void altera_cliente(void) {
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
-void exclui_cliente(void) {		
+void exclui_cliente(void) {
+    system("clear||cls");		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -126,10 +143,13 @@ void exclui_cliente(void) {
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
 void tela_sobre(void) {
+    system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -145,10 +165,13 @@ void tela_sobre(void) {
     printf("| seus processos de gestão, seja implementando, atualizando ou otimizando     |\n");                                                        
     printf("| suas operações.                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
 void tela_equipe(void) {
+    system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -164,6 +187,8 @@ void tela_equipe(void) {
     printf("|                                                                             |\n");                                                        
     printf("| PROJETO BuyYourCar: https://github.com/xonazz/buyyoucar.git                 |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
     printf("\n");
 }
 
