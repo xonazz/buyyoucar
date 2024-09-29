@@ -19,6 +19,11 @@ void atualiza_veiculo(void);
 void exclui_veiculo(void);
 
 void tela_funcionario(void);
+void cadastra_funcionario(void);
+void pesquisa_funcionario(void);
+void atualiza_funcionario(void);
+void exclui_funcionario(void);
+
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -39,6 +44,11 @@ int main(void) {
     exclui_veiculo();
     
     tela_funcionario();
+    cadastra_funcionario();
+    pesquisa_funcionario();
+    atualiza_funcionario();
+    exclui_funcionario();
+    
     tela_sobre();
     tela_equipe();
     return 0;
@@ -290,6 +300,94 @@ void tela_funcionario(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar();
 } 
+
+void cadastra_funcionario(void) {
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                             Cadastrar Funcionário                           |\n");
+    printf("|                                                                             |\n");
+    printf("| CPF (Apenas número) :                                                       |\n");
+    printf("| Nome Completo:                                                              |\n");
+    printf("| E-mail:                                                                     |\n");
+    printf("| Data de nascimento(dd/mm/aaaa)                                              |\n");
+    printf("| Celular (Apenas números) :                                                  |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar(); 
+
+}  
+
+void pesquisa_funcionario(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                         Pesquisar Dados do Funcionário                      |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}  
+
+void atualiza_funcionario(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                       Atualizar Cadastro do Funcionário                     |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}  
+
+void exclui_funcionario(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                       Excluir Funcionário do Sistema                        |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}   
 
 void tela_sobre(void) { 
     system("clear||cls");
