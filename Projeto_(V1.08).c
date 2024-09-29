@@ -8,6 +8,7 @@ void tela_principal(void);
 void tela_cliente(void);
 void cadastra_cliente(void);
 void pesquisa_cliente(void);
+void altera_cliente(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
@@ -19,6 +20,7 @@ int main(void) {
     tela_cliente();
     cadastra_cliente();
     pesquisa_cliente();
+    altera_cliente();
 
     tela_sobre();
     tela_equipe();
@@ -85,6 +87,20 @@ void cadastra_cliente(void) {
 }
 
 void pesquisa_cliente(void) {		
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                Menu Cliente                                 |\n");
+    printf("|                                                                             |\n");
+    printf("| CPF (Apenas Números):                                                       |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n");
+}
+
+void altera_cliente(void) {		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
