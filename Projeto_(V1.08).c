@@ -9,18 +9,20 @@ void tela_cliente(void);
 void cadastra_cliente(void);
 void pesquisa_cliente(void);
 void altera_cliente(void);
+void exclui_cliente(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
 
 // ################################
-// Programa principal
+// Programa Principal
 int main(void) {
     tela_principal();
     tela_cliente();
     cadastra_cliente();
     pesquisa_cliente();
     altera_cliente();
+    exclui_cliente();
 
     tela_sobre();
     tela_equipe();
@@ -32,7 +34,6 @@ int main(void) {
 // Funções
 
 void tela_principal(void) {
-
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
@@ -101,6 +102,20 @@ void pesquisa_cliente(void) {
 }
 
 void altera_cliente(void) {		
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                Menu Cliente                                 |\n");
+    printf("|                                                                             |\n");
+    printf("| CPF (Apenas Números):                                                       |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n");
+}
+
+void exclui_cliente(void) {		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
