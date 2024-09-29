@@ -18,6 +18,7 @@ void pesquisa_veiculo(void);
 void atualiza_veiculo(void);
 void exclui_veiculo(void);
 
+void tela_funcionario(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -37,6 +38,7 @@ int main(void) {
     atualiza_veiculo();
     exclui_veiculo();
     
+    tela_funcionario();
     tela_sobre();
     tela_equipe();
     return 0;
@@ -121,7 +123,6 @@ void pesquisa_cliente(void) {
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-
     getchar();
     printf("\n");
 }
@@ -269,6 +270,27 @@ void exclui_veiculo(void) {
     getchar(); 
 } 
 
+void tela_funcionario(void) { 
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                             Módulo Funcionário                              |\n");
+    printf("|                                                                             |\n");
+    printf("| 1. Cadastrar Novo Funcionário                                               |\n");
+    printf("| 2. Pesquisar os Dados do Funcionário                                        |\n");
+    printf("| 3. Atualizar o Cadastro do Funcionário                                      |\n");
+    printf("| 4. Excluir Funcionário do Sistema                                           |\n");
+    printf("| 0. Sair                                                                     |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
+    printf("\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar();
+} 
+
 void tela_sobre(void) { 
     system("clear||cls");
     printf("\n");
@@ -311,6 +333,5 @@ void tela_equipe(void) {
     getchar();
     printf("\n");
 }
-
 
 
