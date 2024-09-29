@@ -12,6 +12,7 @@ void pesquisa_cliente(void);
 void altera_cliente(void);
 void exclui_cliente(void);
 
+void tela_veiculo(void);
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -25,6 +26,7 @@ int main(void) {
     altera_cliente();
     exclui_cliente();
 
+    tela_veiculo();
     tela_sobre();
     tela_equipe();
     return 0;
@@ -87,7 +89,6 @@ void cadastra_cliente(void) {
     printf("| Nome Completo:                                                              |\n");
     printf("| CPF (Apenas Números):                                                       |\n");
     printf("| Número de Telefone (Apenas Números):                                        |\n");
-    printf("| Data de nascimento(dd/mm/aaaa):                                             |\n");
     printf("| Número da CNH (Apenas Números):                                             |\n");
     printf("| E-mail:                                                                     |\n");
     printf("| Endereço: (Cidade, Bairro, Rua e Número)                                    |\n");
@@ -148,6 +149,27 @@ void exclui_cliente(void) {
     printf("\n");
 }
 
+void tela_veiculo(void) {   
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                Módulo Veículo                               |\n");
+    printf("|                                                                             |\n");
+    printf("| 1. Cadastrar Veículo                                                        |\n");
+    printf("| 2. Pesquisar Dados do Veículo                                               |\n");
+    printf("| 3. Atualizar Dados do Veículo                                               |\n");
+    printf("| 4. Excluir Veículo do Sistema                                               |\n");
+    printf("| 0. Sair                                                                     |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+} 
+
 void tela_sobre(void) {
     system("clear||cls");
     printf("\n");
@@ -191,4 +213,5 @@ void tela_equipe(void) {
     getchar();
     printf("\n");
 }
+
 
