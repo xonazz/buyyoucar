@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////////
+///             Universidade Federal do Rio Grande do Norte                 ///
+///                  Disciplina DCT1106 -- Programação                      ///
+///                  Projeto de uma Concessionária de Veículos              ///
+///////////////////////////////////////////////////////////////////////////////
+
+
 #include <stdio.h> 
 #include <stdlib.h>
 
@@ -397,6 +404,7 @@ void tela_sobre(void) {
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                    Sistema de Gestão Para Concessionária                    |\n");
+    printf("|                                                                             |\n");
     printf("| Programa universitário da disciplina de PROGRAMAÇÃO (DCT1106) da UFRN.      |\n");
     printf("| Escrito na linguagem de programação C, fornecendo uma plataforma de gestão  |\n");
     printf("| para uma concessionária de veículos, com interfaces intuitivas divididas em |\n");
@@ -431,5 +439,3 @@ void tela_equipe(void) {
     getchar();
     printf("\n");
 }
-
-
