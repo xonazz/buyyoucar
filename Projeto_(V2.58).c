@@ -32,6 +32,8 @@ void atualiza_funcionario(void);
 void exclui_funcionario(void);
 
 void tela_venda(void);
+void cadastra_venda(void);
+
 void tela_sobre(void);
 void tela_equipe(void);
 
@@ -58,6 +60,8 @@ int main(void) {
     exclui_funcionario();
    
     tela_venda();
+    cadastra_venda();
+
     tela_sobre();
     tela_equipe();
     return 0;
@@ -125,6 +129,7 @@ void tela_cliente(void) {
 }
 
 void cadastra_cliente(void) {	
+
     system("clear||cls");	
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -147,6 +152,7 @@ void cadastra_cliente(void) {
 }
 
 void pesquisa_cliente(void) {	
+
     system("clear||cls");	
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -164,6 +170,7 @@ void pesquisa_cliente(void) {
 }
 
 void atualiza_cliente(void) {
+
     system("clear||cls");		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -181,6 +188,7 @@ void atualiza_cliente(void) {
 }
 
 void exclui_cliente(void) {
+
     system("clear||cls");		
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -343,6 +351,7 @@ void tela_funcionario(void) {
 }
 
 void cadastra_funcionario(void) {
+
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -458,6 +467,28 @@ void tela_venda(void) {
     getchar();
     printf("\n");
 }
+
+void cadastra_venda(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                             Cadastrar Venda                                 |\n");
+    printf("|                                                                             |\n");
+    printf("| N° de protocolo:                                                            |\n");
+    printf("| Data e hora:                                                                |\n");
+    printf("| CPF do Comprador:                                                           |\n");
+    printf("| CPF do Vendedor:                                                            |\n");
+    printf("| Valor:                                                                      |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar(); 
+}  
 
 void tela_sobre(void) { 
     system("clear||cls");
