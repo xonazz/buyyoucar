@@ -17,8 +17,8 @@ Este projeto tem como principal objetivo auxiliar pequenas e médias empresas qu
 Para dúvidas ou suporte, entre em contato com os desenvolvedores do SIG-Car através dos seguintes canais\
 Ivyson
 - GitHub: [@IvysonWNM](https://github.com/IvysonWNM)
-- E-mail: [ivysonnunes@hotmail.com](milto:ivysonnunes@hotmail.com)
+- E-mail: [ivysonnunes@hotmail.com](mailto:ivysonnunes@hotmail.com)
 
 Jonas
 - GitHub: [@xonazz](https://github.com/xonazz)
-- E-mail: [robsonjjcs@gmail.com](https://robsonjjcs@gmail.com)
+- E-mail: [robsonjjcs@gmail.com](mailto:robsonjjcs@gmail.com)
