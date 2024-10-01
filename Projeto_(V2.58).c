@@ -33,6 +33,7 @@ void exclui_funcionario(void);
 
 void tela_venda(void);
 void cadastra_venda(void);
+void pesquisa_venda(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
@@ -61,6 +62,7 @@ int main(void) {
    
     tela_venda();
     cadastra_venda();
+    pesquisa_venda();
 
     tela_sobre();
     tela_equipe();
@@ -489,6 +491,26 @@ void cadastra_venda(void) {
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar(); 
 }  
+
+void pesquisa_venda(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                              Pesquisar Venda                                |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe o N° de protocolo:                                                  |\n");
+    printf("|                                                                             |\n");
+    printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+} 
 
 void tela_sobre(void) { 
     system("clear||cls");
