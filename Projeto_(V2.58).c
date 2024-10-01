@@ -1,3 +1,10 @@
+///////////////////////////////////////////////////////////////////////////////
+///               Universidade Federal do Rio Grande do Norte               ///
+///                    Disciplina DCT1106 -- Programação                    ///
+///          Projeto de Sistema para uma Concessionária de Veículos         ///
+///         Developed by @IvysonWNM and @xonazz -- since sept, 2024         ///
+///////////////////////////////////////////////////////////////////////////////
+
 #include <stdio.h> 
 #include <stdlib.h>
 
@@ -59,8 +66,15 @@ int main(void) {
 // Funções
 
 void tela_principal(void) {
+    char op;
     system("clear||cls");
     printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                 Universidade Federal do Rio Grande do Norte                 |\n");
+    printf("|                      Disciplina DCT1106 -- Programação                      |\n");
+    printf("|            Projeto de Sistema para uma Concessionária de Veículos           |\n");
+    printf("|           Developed by @IvysonWNM and @xonazz -- since sept, 2024           |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
@@ -74,6 +88,13 @@ void tela_principal(void) {
     printf("| 5. Módulo Relatórios                                                        |\n");
     printf("| 0. Sair                                                                     |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
+    printf("\n");
+    printf("            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("\n");
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
     printf("\n");
@@ -171,7 +192,8 @@ void exclui_cliente(void) {
     printf("\n");
 }
 
-void tela_veiculo(void) {   
+void tela_veiculo(void) {
+    char op;   
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -187,10 +209,17 @@ void tela_veiculo(void) {
     printf("| 0. Sair                                                                     |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\n"); 
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
-    getchar(); 
-} 
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
+    printf("\n");
+    printf("            Escolha a opção desejada: ");
+    scanf("%c", &op);
+    getchar();
+    printf("\n");
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+    printf("\n");
+}
 
 void cadastra_veiculo(void) {
     
@@ -281,6 +310,7 @@ void exclui_veiculo(void) {
 } 
 
 void tela_funcionario(void) { 
+    char op;
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -296,10 +326,17 @@ void tela_funcionario(void) {
     printf("| 0. Sair                                                                     |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    printf("            Escolha a opção desejada: ");
+    scanf("%c", &op);
     getchar();
-} 
+    printf("\n");
+    printf("──────────────────────────────────────────────────────────────────────────────\n");
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+    getchar();
+    printf("\n");
+}
 
 void cadastra_funcionario(void) {
     system("clear||cls");
@@ -393,10 +430,17 @@ void tela_sobre(void) {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                 Universidade Federal do Rio Grande do Norte                 |\n");
+    printf("|                      Disciplina DCT1106 -- Programação                      |\n");
+    printf("|            Projeto de Sistema para uma Concessionária de Veículos           |\n");
+    printf("|           Developed by @IvysonWNM and @xonazz -- since sept, 2024           |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                    Sistema de Gestão Para Concessionária                    |\n");
+    printf("|                                                                             |\n");
     printf("| Programa universitário da disciplina de PROGRAMAÇÃO (DCT1106) da UFRN.      |\n");
     printf("| Escrito na linguagem de programação C, fornecendo uma plataforma de gestão  |\n");
     printf("| para uma concessionária de veículos, com interfaces intuitivas divididas em |\n");
@@ -413,6 +457,12 @@ void tela_sobre(void) {
 void tela_equipe(void) {
     system("clear||cls");
     printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                 Universidade Federal do Rio Grande do Norte                 |\n");
+    printf("|                      Disciplina DCT1106 -- Programação                      |\n");
+    printf("|            Projeto de Sistema para uma Concessionária de Veículos           |\n");
+    printf("|           Developed by @IvysonWNM and @xonazz -- since sept, 2024           |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                 BuyYourCar                                  |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
@@ -431,5 +481,6 @@ void tela_equipe(void) {
     getchar();
     printf("\n");
 }
+
 
 
