@@ -35,6 +35,7 @@ void tela_venda(void);
 void cadastra_venda(void);
 void pesquisa_venda(void);
 void atualiza_venda(void);
+void exclui_venda(void);
 
 void tela_sobre(void);
 void tela_equipe(void);
@@ -65,6 +66,7 @@ int main(void) {
     cadastra_venda();
     pesquisa_venda();
     atualiza_venda();
+    exclui_venda();
 
     tela_sobre();
     tela_equipe();
@@ -269,11 +271,7 @@ void pesquisa_veiculo(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                           Pesquisar Dados do Veículo                        |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe a Placa:                                                            |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -291,11 +289,7 @@ void atualiza_veiculo(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                          Atualizar Dados do Veículo                         |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe a Placa:                                                            |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -313,11 +307,7 @@ void exclui_veiculo(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                          Excluir Veículo do Sistema                         |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe a Placa:                                                            |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -387,11 +377,7 @@ void pesquisa_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                         Pesquisar Dados do Funcionário                      |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe o CPF(Apenas Números):                                              |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -409,11 +395,7 @@ void atualiza_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                       Atualizar Cadastro do Funcionário                     |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe o CPF(Apenas Números):                                              |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -431,11 +413,7 @@ void exclui_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                       Excluir Funcionário do Sistema                        |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe o CPF(Apenas Números):                                              |\n");
-    printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -504,9 +482,7 @@ void pesquisa_venda(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                              Pesquisar Venda                                |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe o N° de protocolo:                                                  |\n");
-    printf("|                                                                             |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
@@ -524,9 +500,25 @@ void atualiza_venda(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                              Atualizar Venda                                |\n");
     printf("|                                                                             |\n");
-    printf("|                                                                             |\n");
     printf("| Informe o N° de protocolo:                                                  |\n");
     printf("|                                                                             |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("\n"); 
+    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
+    getchar(); 
+}
+
+void exclui_venda(void) {
+    
+    system("clear||cls");
+    printf("\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                                 BuyYourCar                                  |\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+    printf("|                               Excluir Venda                                 |\n");
+    printf("|                                                                             |\n");
+    printf("| Informe o N° de protocolo:                                                  |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("\n"); 
