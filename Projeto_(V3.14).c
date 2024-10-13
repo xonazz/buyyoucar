@@ -50,10 +50,10 @@ void exclui_venda(void);
 // ################################
 // Programa Principal
 int main(void) {
-    int num_pag;
+    int op;
     do {
-        num_pag = tela_principal();
-        switch (num_pag) {
+        op = tela_principal();
+        switch (op) {
            case 1: 
                tela_cliente();
                break;
@@ -73,7 +73,7 @@ int main(void) {
                tela_equipe();
                break;
         }
-    } while (num_pag != 0);
+    } while (op != 0);
     printf("The End\n"); 
     return 0;
 }
@@ -82,7 +82,7 @@ int main(void) {
 // Funções
 
 int tela_principal(void) {
-    int num_pag;
+    int op;
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -109,15 +109,15 @@ int tela_principal(void) {
     printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
     printf("            Escolha a opção desejada: ");
-    scanf("%d", &num_pag);
+    scanf("%d", &op);
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    return num_pag;
+    return op;
 }
 
 void tela_cliente(void) {
-    char num_pag;
+    char op;
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -136,7 +136,7 @@ void tela_cliente(void) {
     printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
     printf("            Escolha a opção desejada: ");
-    scanf("%c", &num_pag);
+    scanf("%c", &op);
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
@@ -227,7 +227,7 @@ void exclui_cliente(void) {
 }
 
 void tela_veiculo(void) {
-    char num_pag;   
+    char op;   
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -246,7 +246,7 @@ void tela_veiculo(void) {
     printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
     printf("            Escolha a opção desejada: ");
-    scanf("%c", &num_pag);
+    scanf("%c", &op);
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
@@ -335,7 +335,7 @@ void exclui_veiculo(void) {
 } 
 
 void tela_funcionario(void) { 
-    char num_pag;
+    char op;
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -354,7 +354,7 @@ void tela_funcionario(void) {
     printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
     printf("            Escolha a opção desejada: ");
-    scanf("%c", &num_pag);
+    scanf("%c", &op);
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
@@ -445,7 +445,7 @@ void exclui_funcionario(void) {
 }   
 
 void tela_venda(void) { 
-    char num_pag;
+    char op;
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -464,7 +464,7 @@ void tela_venda(void) {
     printf("──────────────────────────────────────────────────────────────────────────────\n");
     printf("\n");
     printf("            Escolha a opção desejada: ");
-    scanf("%c", &num_pag);
+    scanf("%c", &op);
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
