@@ -248,7 +248,8 @@ void exclui_cliente(void) {
 }
 
 void tela_veiculo(void) {
-    char op;   
+    char op;  
+    do { 
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -271,13 +272,33 @@ void tela_veiculo(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_veiculo();
-    pesquisa_veiculo();
-    atualiza_veiculo();
-    exclui_veiculo();
+    switch (op) {
+	case '1':
+		cadastra_veiculo();
+		break;
+	case '2':
+		pesquisa_veiculo();
+		break;
+	case '3':
+		atualiza_veiculo();
+		break;
+	case '4':
+		exclui_veiculo();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;
+	}
+    } while (op != '0');
 }
 
 void cadastra_veiculo(void) {
