@@ -509,6 +509,7 @@ void exclui_funcionario(void) {
 
 void tela_venda(void) { 
     char op;
+    do {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -531,13 +532,33 @@ void tela_venda(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_venda();
-    pesquisa_venda();
-    atualiza_venda();
-    exclui_venda();
+    switch (op) {
+	case '1':
+		cadastra_venda();
+		break;
+	case '2':
+		pesquisa_venda();
+		break;
+	case '3':
+		atualiza_venda();
+		break;
+	case '4':
+		exclui_venda();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;
+	}
+    } while (op != '0');
 }
 
 void cadastra_venda(void) {
