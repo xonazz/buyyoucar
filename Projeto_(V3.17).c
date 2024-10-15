@@ -8,7 +8,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-// Projeto V2.98
+// Projeto V3.17
 
 // ################################
 // Assinatura das Funções ( telas principais)
@@ -118,6 +118,7 @@ int tela_principal(void) {
 
 void tela_cliente(void) {
     char op;
+    do {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -140,13 +141,33 @@ void tela_cliente(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_cliente();
-    pesquisa_cliente();
-    atualiza_cliente();
-    exclui_cliente();
+    switch (op) {
+    	case '1':
+    		cadastra_cliente();
+		break;
+    	case '2':
+    		pesquisa_cliente();
+		break;
+    	case '3':
+    		atualiza_cliente();
+		break;
+    	case '4':
+    		exclui_cliente();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;	
+	}
+    } while (op != '0');
 }
 
 void cadastra_cliente(void) {	
