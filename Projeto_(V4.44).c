@@ -8,7 +8,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
-// Projeto V2.98
+// Projeto V4.44
 
 // ################################
 // Assinatura das Funções ( telas principais)
@@ -118,6 +118,7 @@ int tela_principal(void) {
 
 void tela_cliente(void) {
     char op;
+    do {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -140,13 +141,33 @@ void tela_cliente(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_cliente();
-    pesquisa_cliente();
-    atualiza_cliente();
-    exclui_cliente();
+    switch (op) {
+    	case '1':
+    		cadastra_cliente();
+		break;
+    	case '2':
+    		pesquisa_cliente();
+		break;
+    	case '3':
+    		atualiza_cliente();
+		break;
+    	case '4':
+    		exclui_cliente();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;	
+	}
+    } while (op != '0');
 }
 
 void cadastra_cliente(void) {	
@@ -227,7 +248,8 @@ void exclui_cliente(void) {
 }
 
 void tela_veiculo(void) {
-    char op;   
+    char op;  
+    do { 
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -250,13 +272,33 @@ void tela_veiculo(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_veiculo();
-    pesquisa_veiculo();
-    atualiza_veiculo();
-    exclui_veiculo();
+    switch (op) {
+	case '1':
+		cadastra_veiculo();
+		break;
+	case '2':
+		pesquisa_veiculo();
+		break;
+	case '3':
+		atualiza_veiculo();
+		break;
+	case '4':
+		exclui_veiculo();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;
+	}
+    } while (op != '0');
 }
 
 void cadastra_veiculo(void) {
@@ -336,6 +378,7 @@ void exclui_veiculo(void) {
 
 void tela_funcionario(void) { 
     char op;
+    do {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -358,13 +401,33 @@ void tela_funcionario(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_funcionario();
-    pesquisa_funcionario();
-    atualiza_funcionario();
-    exclui_funcionario();
+    switch (op) {
+	case '1':
+		cadastra_funcionario();
+		break;
+	case '2':
+		pesquisa_funcionario();
+		break;
+	case '3':
+		atualiza_funcionario();
+		break;
+	case '4':
+		exclui_funcionario();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;
+	}
+    } while (op != '0');
 }
 
 void cadastra_funcionario(void) {
@@ -446,6 +509,7 @@ void exclui_funcionario(void) {
 
 void tela_venda(void) { 
     char op;
+    do {
     system("clear||cls");
     printf("\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
@@ -468,13 +532,33 @@ void tela_venda(void) {
     getchar();
     printf("\n");
     printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-    cadastra_venda();
-    pesquisa_venda();
-    atualiza_venda();
-    exclui_venda();
+    switch (op) {
+	case '1':
+		cadastra_venda();
+		break;
+	case '2':
+		pesquisa_venda();
+		break;
+	case '3':
+		atualiza_venda();
+		break;
+	case '4':
+		exclui_venda();
+		break;
+	case '0':
+		printf("Voltando para o menu principal\n");
+    		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar();
+		break;
+	default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;
+	}
+    } while (op != '0');
 }
 
 void cadastra_venda(void) {
