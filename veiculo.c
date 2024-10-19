@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h>
+#include "veiculo.h"
 
 void tela_veiculo(void) {
     char op;  
