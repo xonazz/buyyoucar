@@ -1,5 +1,6 @@
 #include <stdio.h> 
 #include <stdlib.h>
+#include "cliente.h"
 
 void tela_cliente(void) {
     char op;
