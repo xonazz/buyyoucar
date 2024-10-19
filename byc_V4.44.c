@@ -7,13 +7,14 @@
 
 #include <stdio.h> 
 #include <stdlib.h>
+#include "cliente.h"
 
 // Projeto V4.44
 
 // ################################
 // Assinatura das Funções ( telas principais)
 int tela_principal(void);
-void tela_cliente(void);
+
 void tela_veiculo(void);
 void tela_funcionario(void);
 void tela_venda(void);
@@ -22,12 +23,6 @@ void tela_equipe(void);
 
 
 // Assinatura das Funções (telas secundárias)
-
-void cadastra_cliente(void);
-void pesquisa_cliente(void);
-void atualiza_cliente(void);
-void exclui_cliente(void);
-
 
 void cadastra_veiculo(void);
 void pesquisa_veiculo(void);
@@ -116,188 +111,57 @@ int tela_principal(void) {
     return op;
 }
 
-void tela_cliente(void) {
-    char op;
-    do {
-    system("clear||cls");
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Menu Cliente                                 |\n");
-    printf("|                                                                             |\n");
-    printf("| 1. Cadastrar um Novo Cliente                                                |\n");
-    printf("| 2. Procurar um Cliente                                                      |\n");
-    printf("| 3. Alterar Dados do Cliente                                                 |\n");
-    printf("| 4. Excluir Cliente                                                          |\n");
-    printf("| 0. Voltar ao Menu                                                           |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\n");
-    printf("            Escolha a opção desejada: ");
-    scanf("%c", &op);
-    getchar();
-    printf("\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    switch (op) {
-    	case '1':
-    		cadastra_cliente();
-		break;
-    	case '2':
-    		pesquisa_cliente();
-		break;
-    	case '3':
-    		atualiza_cliente();
-		break;
-    	case '4':
-    		exclui_cliente();
-		break;
-	case '0':
-		printf("Voltando para o menu principal\n");
-    		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar();
-		break;
-	default:
-		printf("Opção inválida, digite um número entre as opções disponíveis\n");
-		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar(); 
-		break;	
-	}
-    } while (op != '0');
-}
-
-void cadastra_cliente(void) {	
-
-    system("clear||cls");	
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Cadastrar Cliente                            |\n");
-    printf("|                                                                             |\n");
-    printf("| Nome Completo:                                                              |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
-    printf("| Número de Telefone (Apenas Números):                                        |\n");
-    printf("| Número da CNH (Apenas Números):                                             |\n");
-    printf("| E-mail:                                                                     |\n");
-    printf("| Endereço: (Cidade, Bairro, Rua e Número)                                    |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-}
-
-void pesquisa_cliente(void) {	
-
-    system("clear||cls");	
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Pesquisar Cliente                            |\n");
-    printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-}
-
-void atualiza_cliente(void) {
-
-    system("clear||cls");		
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                         Atualizar o Cadastro do Cliente                     |\n");
-    printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-}
-
-void exclui_cliente(void) {
-
-    system("clear||cls");		
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                         Excluir Cliente do Sistema                          |\n");
-    printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
-}
-
 void tela_veiculo(void) {
     char op;  
     do { 
-    system("clear||cls");
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Módulo Veículo                               |\n");
-    printf("|                                                                             |\n");
-    printf("| 1. Cadastrar Veículo                                                        |\n");
-    printf("| 2. Pesquisar Dados do Veículo                                               |\n");
-    printf("| 3. Atualizar Dados do Veículo                                               |\n");
-    printf("| 4. Excluir Veículo do Sistema                                               |\n");
-    printf("| 0. Sair                                                                     |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\n");
-    printf("            Escolha a opção desejada: ");
-    scanf("%c", &op);
-    getchar();
-    printf("\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    switch (op) {
-	case '1':
-		cadastra_veiculo();
-		break;
-	case '2':
-		pesquisa_veiculo();
-		break;
-	case '3':
-		atualiza_veiculo();
-		break;
-	case '4':
-		exclui_veiculo();
-		break;
-	case '0':
-		printf("Voltando para o menu principal\n");
-    		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar();
-		break;
-	default:
-		printf("Opção inválida, digite um número entre as opções disponíveis\n");
-		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar(); 
-		break;
-	}
+        system("clear||cls");
+        printf("\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                                 BuyYourCar                                  |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                                Módulo Veículo                               |\n");
+        printf("|                                                                             |\n");
+        printf("| 1. Cadastrar Veículo                                                        |\n");
+        printf("| 2. Pesquisar Dados do Veículo                                               |\n");
+        printf("| 3. Atualizar Dados do Veículo                                               |\n");
+        printf("| 4. Excluir Veículo do Sistema                                               |\n");
+        printf("| 0. Sair                                                                     |\n");
+        printf("|                                                                             |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        printf("\n");
+        printf("            Escolha a opção desejada: ");
+        scanf("%c", &op);
+        getchar();
+        printf("\n");
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        switch (op) {
+        case '1':
+            cadastra_veiculo();
+            break;
+        case '2':
+            pesquisa_veiculo();
+            break;
+        case '3':
+            atualiza_veiculo();
+            break;
+        case '4':
+            exclui_veiculo();
+            break;
+        case '0':
+            printf("Voltando para o menu principal\n");
+                printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar();
+            break;
+        default:
+            printf("Opção inválida, digite um número entre as opções disponíveis\n");
+            printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar(); 
+            break;
+        }
     } while (op != '0');
 }
 
@@ -379,54 +243,54 @@ void exclui_veiculo(void) {
 void tela_funcionario(void) { 
     char op;
     do {
-    system("clear||cls");
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                             Módulo Funcionário                              |\n");
-    printf("|                                                                             |\n");
-    printf("| 1. Cadastrar Novo Funcionário                                               |\n");
-    printf("| 2. Pesquisar os Dados do Funcionário                                        |\n");
-    printf("| 3. Atualizar o Cadastro do Funcionário                                      |\n");
-    printf("| 4. Excluir Funcionário do Sistema                                           |\n");
-    printf("| 0. Sair                                                                     |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\n");
-    printf("            Escolha a opção desejada: ");
-    scanf("%c", &op);
-    getchar();
-    printf("\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    switch (op) {
-	case '1':
-		cadastra_funcionario();
-		break;
-	case '2':
-		pesquisa_funcionario();
-		break;
-	case '3':
-		atualiza_funcionario();
-		break;
-	case '4':
-		exclui_funcionario();
-		break;
-	case '0':
-		printf("Voltando para o menu principal\n");
-    		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar();
-		break;
-	default:
-		printf("Opção inválida, digite um número entre as opções disponíveis\n");
-		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar(); 
-		break;
-	}
+        system("clear||cls");
+        printf("\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                                 BuyYourCar                                  |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                             Módulo Funcionário                              |\n");
+        printf("|                                                                             |\n");
+        printf("| 1. Cadastrar Novo Funcionário                                               |\n");
+        printf("| 2. Pesquisar os Dados do Funcionário                                        |\n");
+        printf("| 3. Atualizar o Cadastro do Funcionário                                      |\n");
+        printf("| 4. Excluir Funcionário do Sistema                                           |\n");
+        printf("| 0. Sair                                                                     |\n");
+        printf("|                                                                             |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        printf("\n");
+        printf("            Escolha a opção desejada: ");
+        scanf("%c", &op);
+        getchar();
+        printf("\n");
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        switch (op) {
+        case '1':
+            cadastra_funcionario();
+            break;
+        case '2':
+            pesquisa_funcionario();
+            break;
+        case '3':
+            atualiza_funcionario();
+            break;
+        case '4':
+            exclui_funcionario();
+            break;
+        case '0':
+            printf("Voltando para o menu principal\n");
+                printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar();
+            break;
+        default:
+            printf("Opção inválida, digite um número entre as opções disponíveis\n");
+            printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar(); 
+            break;
+        }
     } while (op != '0');
 }
 
@@ -510,54 +374,54 @@ void exclui_funcionario(void) {
 void tela_venda(void) { 
     char op;
     do {
-    system("clear||cls");
-    printf("\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                 BuyYourCar                                  |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
-    printf("|                                Módulo Venda                                 |\n");
-    printf("|                                                                             |\n");
-    printf("| 1. Cadastrar Venda                                                          |\n");
-    printf("| 2. Pesquisar Venda                                                          |\n");
-    printf("| 3. Atualizar Venda                                                          |\n");
-    printf("| 4. Excluir Venda                                                            |\n");
-    printf("| 0. Sair                                                                     |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    printf("\n");
-    printf("            Escolha a opção desejada: ");
-    scanf("%c", &op);
-    getchar();
-    printf("\n");
-    printf("──────────────────────────────────────────────────────────────────────────────\n");
-    switch (op) {
-	case '1':
-		cadastra_venda();
-		break;
-	case '2':
-		pesquisa_venda();
-		break;
-	case '3':
-		atualiza_venda();
-		break;
-	case '4':
-		exclui_venda();
-		break;
-	case '0':
-		printf("Voltando para o menu principal\n");
-    		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar();
-		break;
-	default:
-		printf("Opção inválida, digite um número entre as opções disponíveis\n");
-		printf("\n");
-		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-       		getchar(); 
-		break;
-	}
+        system("clear||cls");
+        printf("\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                                 BuyYourCar                                  |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+        printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
+        printf("|                                Módulo Venda                                 |\n");
+        printf("|                                                                             |\n");
+        printf("| 1. Cadastrar Venda                                                          |\n");
+        printf("| 2. Pesquisar Venda                                                          |\n");
+        printf("| 3. Atualizar Venda                                                          |\n");
+        printf("| 4. Excluir Venda                                                            |\n");
+        printf("| 0. Sair                                                                     |\n");
+        printf("|                                                                             |\n");
+        printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        printf("\n");
+        printf("            Escolha a opção desejada: ");
+        scanf("%c", &op);
+        getchar();
+        printf("\n");
+        printf("──────────────────────────────────────────────────────────────────────────────\n");
+        switch (op) {
+        case '1':
+            cadastra_venda();
+            break;
+        case '2':
+            pesquisa_venda();
+            break;
+        case '3':
+            atualiza_venda();
+            break;
+        case '4':
+            exclui_venda();
+            break;
+        case '0':
+            printf("Voltando para o menu principal\n");
+                printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar();
+            break;
+        default:
+            printf("Opção inválida, digite um número entre as opções disponíveis\n");
+            printf("\n");
+            printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+                getchar(); 
+            break;
+        }
     } while (op != '0');
 }
 
