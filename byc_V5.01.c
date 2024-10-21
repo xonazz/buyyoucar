@@ -11,6 +11,7 @@
 #include "veiculo.h" 
 #include "funcionario.h" 
 #include "venda.h"
+#include "relatorio.h"
 
 // Projeto V5.01
 
@@ -74,8 +75,9 @@ int tela_principal(void) {
     printf("| 2. Módulo Veículos                                                          |\n");
     printf("| 3. Módulo Funcionário                                                       |\n");
     printf("| 4. Módulo Venda                                                             |\n");
-    printf("| 5. Módulo Sobre                                                             |\n");
-    printf("| 6. Módulo Equipe                                                            |\n");
+    printf("| 5. Módulo Relatório                                                         |\n");
+    printf("| 6. Módulo Sobre                                                             |\n");
+    printf("| 7. Módulo Equipe                                                            |\n");
     printf("| 0. Sair                                                                     |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
