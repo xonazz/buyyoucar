@@ -9,7 +9,8 @@
 #include <stdlib.h>
 #include "cliente.h"
 #include "veiculo.h" 
-#include "funcionario.h"
+#include "funcionario.h" 
+#include "venda.h"
 
 // Projeto V4.44
 
