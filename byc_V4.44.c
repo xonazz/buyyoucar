@@ -8,7 +8,8 @@
 #include <stdio.h> 
 #include <stdlib.h>
 #include "cliente.h"
-#include "veiculo.h"
+#include "veiculo.h" 
+#include "funcionario.h"
 
 // Projeto V4.44
 
