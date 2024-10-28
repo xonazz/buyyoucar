@@ -8,10 +8,11 @@ O SIG-Car é um projeto universitário da disciplina de PROGRAMAÇÃO (DCT1106) 
 Este projeto tem como principal objetivo auxiliar pequenas e médias empresas que buscam implementar, substituir ou aprimorar seus processos automatizados de gestão. O sistema busca aumentar a eficiência operacional e facilitar o gerenciamento de informações, permitindo que a empresa tenham mais controle sobre seus clientes, veículos e funcionários.
 
 ## Funcionalidades
-- Registro dos clientes: Permite adicionar novos clientes com informações detalhadas.
-- Exibição dos dados dos clientes: Exibe as informações dos clientes cadastrados.
-- Cadastro de veículos no estoque: Adiciona veículos ao sistema, com detalhes como placa, marca, modelo, ano, cor e valor de venda.
-- Gerenciamento de funcionários: Registra e exibe as informações dos funcionários.
+- Gerenciamento de Clientes: Permite cadastrar, exibir, pesquisar, atualizar e excluir informações de clientes no sistema.
+- Gerenciamento de Veículos: Possibilita cadastrar, exibir, pesquisar, atualizar e excluir veículos no estoque, com informações detalhadas como placa, marca, modelo, ano, cor e valor de venda.
+- Gerenciamento de Funcionários: Permite registrar, exibir, atualizar e excluir dados de funcionários, mantendo o controle de suas informações.
+- Controle de Vendas: Garante o registro, exibição, atualização e cancelamento de vendas, associando clientes e veículos específicos e mantendo um histórico das transações.
+- Geração de Relatórios: Fornece relatórios detalhados sobre vendas, estoque, clientes e funcionários, auxiliando na análise e acompanhamento dos dados do sistema.
 
 ## Contatos
 Para dúvidas ou suporte, entre em contato com os desenvolvedores do SIG-Car através dos seguintes canais\
