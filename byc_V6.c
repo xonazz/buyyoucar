@@ -13,7 +13,7 @@
 #include "venda.h"
 #include "relatorio.h"
 
-// Projeto V5.01
+// Projeto V6
 
 // ################################
 // Assinatura das Funções
@@ -41,11 +41,20 @@ int main(void) {
                tela_venda();
                break;
            case 5: 
-               tela_sobre();
+               tela_relatorio();
                break;
            case 6: 
+               tela_sobre();
+               break;
+           case 7: 
                tela_equipe();
                break;
+	  default:
+		printf("Opção inválida, digite um número entre as opções disponíveis\n");
+		printf("\n");
+		printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
+       		getchar(); 
+		break;	
         }
     } while (op != 0);
     printf("The End\n"); 
