@@ -54,10 +54,10 @@ Para compilar o código do projeto em um sistema Linux, siga as etapas abaixo:
 - **Geração de Relatórios**: Fornece relatórios detalhados sobre vendas, estoque, clientes e funcionários, auxiliando na análise e acompanhamento dos dados do sistema.
 
 ## Tecnologias Usadas
-**Linguagem de Porgramação**: C
-**Compilador**: GCC
-**Sistemas Operacionais**: Linux, Windows (através do WSL)
-**Plataforma de Desenvolvimento**: Visual Studio Code
+- **Linguagem de Porgramação**: C
+-  **Compilador**: GCC
+- **Sistemas Operacionais**: Linux, Windows (através do WSL)
+- **Plataforma de Desenvolvimento**: Visual Studio Code
 
 
 ## Contatos
