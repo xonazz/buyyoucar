@@ -14,6 +14,42 @@ Este projeto tem como principal objetivo auxiliar pequenas e médias empresas qu
 - Controle de Vendas: Garante o registro, exibição, atualização e cancelamento de vendas, associando clientes e veículos específicos e mantendo um histórico das transações.
 - Geração de Relatórios: Fornece relatórios detalhados sobre vendas, estoque, clientes e funcionários, auxiliando na análise e acompanhamento dos dados do sistema.
 
+## Compilação
+ ### Linux
+Para compilar o código do projeto em um sistema Linux, siga as etapas abaixo:
+1. **Abra o terminal ( Ctrl + Alt + T)**
+2. **instale o compilador GCC, caso ainda não o tenha. Use o comando apropriado para sua distribuição:**
+ - **Debian/Ubuntu/Mint**:
+     ```sh
+     sudo apt install gcc
+     ```
+   - **Fedora**:
+     ```sh
+     sudo dnf install gcc
+     ```
+   - **Arch Linux**:
+     ```sh
+     sudo pacman -S gcc
+     ```
+   - **openSUSE**:
+     ```sh
+     sudo zypper install gcc
+     ```
+- Caso tenha dificuldades para instalar o compilador, procure no ChatGPT ou em fóruns online
+  
+3. **Clone o repositório:**
+   '''sh
+   git clone https://github.com/xonazz/buyyoucar.git
+4. **Navegue até o diretório do projeto:**
+   '''sh
+   cd buyyoucar
+5. **Compile o código**
+   '''sh
+   gcc -Wall byc_V5.01.c cliente.c veiculo.c funcionario.c venda.c relatorio.c -o buyyourcar
+6. **Execute o programa:**
+   '''sh
+   ./buyyourcar
+   
 ## Contatos
 Para dúvidas ou suporte, entre em contato com os desenvolvedores do SIG-Car através dos seguintes canais\
 Ivyson
