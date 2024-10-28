@@ -31,16 +31,16 @@ Para compilar o código do projeto em um sistema Linux, siga as etapas abaixo:
 - Caso tenha dificuldades para instalar o compilador, procure no ChatGPT ou em fóruns online
   
 3. **Clone o repositório**:
-   '''sh
+   ```sh
    git clone https://github.com/xonazz/buyyoucar.git
 4. **Navegue até o diretório do projeto**:
-   '''sh
+   ```sh
    cd buyyoucar
 5. **Compile o código**:
-   '''sh
+   ```sh
    gcc -Wall byc_V5.01.c cliente.c veiculo.c funcionario.c venda.c relatorio.c -o buyyourcar
 6. **Execute o programa**:
-   '''sh
+   ```sh
    ./buyyourcar
 
  ### Windows
