@@ -66,13 +66,41 @@ void cadastra_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                             Cadastrar Funcionário                           |\n");
     printf("|                                                                             |\n");
-    printf("| CPF (Apenas número) :                                                       |\n");
-    printf("| Nome Completo:                                                              |\n");
-    printf("| E-mail:                                                                     |\n");
-    printf("| Data de nascimento(dd/mm/aaaa)                                              |\n");
-    printf("| Celular (Apenas números) :                                                  |\n");
+    printf("| Insira os dados do funcionário:                                             |\n");
     printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("|_____________________________________________________________________________|\n");
+
+    struct Funcionario func;
+
+    // Aloca memória para os campos da struct
+    alocar_dados(&func);
+
+    // Ler os dados do usuário
+    ler_dados(&func);
+
+    // Exibir os dados lidos
+    exibir_dados(&func);
+
+    // Salvar os dados em um arquivo binário
+    salvar_dados_binario(&func, "valid_func.dat");
+
+    // Liberar a memória alocada
+    liberar_dados(&func);
+
+    // Para carregar os dados de volta de um arquivo binário
+    struct Funcionario func_carregado;
+    alocar_dados(&func_carregado);  // Aloca memória para os dados do funcionário carregado
+
+    carregar_dados_binario(&func_carregado, "valid_func.dat");
+
+    // Exibir os dados carregados
+    printf("\nDados carregados do arquivo:\n");
+    exibir_dados(&func_carregado);
+
+    // Liberar memória após carregar os dados
+    liberar_dados(&func_carregado);
+
+    return 0;
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar(); 
