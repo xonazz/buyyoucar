@@ -65,13 +65,23 @@ void cadastra_veiculo(void) {
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                              Cadastrar Veículo                              |\n");
-    printf("|                                                                             |\n");
-    printf("| Informe a Placa:                                                            |\n");
-    printf("| Marca:                                                                      |\n");
-    printf("| Modelo:                                                                     |\n");
-    printf("| Ano de fabricação:                                                          |\n");
-    printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("| Informe os dados:                                                           |\n");
+    printf("|                                                                             |\n"); 
+    printf("|_____________________________________________________________________________|\n");
+    
+    // Exemplo de como utilizar
+    Veiculo* veiculo = cria_veiculo("ABCD-123", "Fiat", "Palio", 2020);
+
+    if (veiculo != NULL) {
+        exibe_veiculo(veiculo);  // Exibe os dados do veículo
+        salvar_veiculo_em_arquivo(veiculo);  // Salva os dados no arquivo
+    }
+
+    // Libera a memória alocada
+    free(veiculo);
+    
+    return 0;
+
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar(); 
