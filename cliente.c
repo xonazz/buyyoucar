@@ -66,17 +66,24 @@ void cadastra_cliente(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                Cadastrar Cliente                            |\n");
     printf("|                                                                             |\n");
-    printf("| Nome Completo:                                                              |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
-    printf("| Número de Telefone (Apenas Números):                                        |\n");
-    printf("| Número da CNH (Apenas Números):                                             |\n");
-    printf("| E-mail:                                                                     |\n");
-    printf("| Endereço: (Cidade, Bairro, Rua e Número)                                    |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
+    printf("|_____________________________________________________________________________|\n");
+
+    // Criar e obter dados da pessoa
+    Pessoa* pessoa = criar_pessoa();
+
+    if (pessoa != NULL) {
+        // Imprimir os dados coletados
+        imprimir_pessoa(pessoa);
+
+        // Salvar os dados no arquivo
+        salvar_pessoa_em_arquivo(pessoa);
+
+        // Liberar memória alocada
+        free(pessoa);
+    }
+
 }
 
 void pesquisa_cliente(void) {	
