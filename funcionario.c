@@ -188,9 +188,17 @@ void exclui_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                       Excluir Funcionário do Sistema                        |\n");
     printf("|                                                                             |\n");
-    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    char cpf_a_excluir[12];
+    printf("Digite o CPF do funcionário a ser excluído (11 dígitos): ");
+    fgets(cpf_a_excluir, 12, stdin);
+    cpf_a_excluir[strcspn(cpf_a_excluir, "\n")] = '\0';  // Remove o caractere de nova linha
+
+    excluir_funcionario_por_cpf("funcionarios.bin", cpf_a_excluir);
+
+    return 0;
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar(); 
