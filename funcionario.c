@@ -117,13 +117,26 @@ void pesquisa_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                         Pesquisar Dados do Funcionário                      |\n");
     printf("|                                                                             |\n");
-    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    const char *nome_arquivo = "funcionario.dat";
+    char cpf_buscar[12];
+
+    // Solicita o CPF a ser buscado
+    printf("Digite o CPF a ser buscado (11 dígitos): ");
+    fgets(cpf_buscar, 12, stdin);
+    cpf_buscar[strcspn(cpf_buscar, "\n")] = '\0';  // Remove o caractere de nova linha
+
+    // Chama a função para buscar o funcionário pelo CPF
+    buscar_dados_por_cpf(nome_arquivo, cpf_buscar);
+
+    return 0;
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar(); 
 }  
+
 
 void atualiza_funcionario(void) {
     
