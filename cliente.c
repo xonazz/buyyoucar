@@ -155,9 +155,23 @@ void exclui_cliente(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                         Excluir Cliente do Sistema                          |\n");
     printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    char cpf[100];
+
+    printf("Digite o CPF do cliente que deseja deletar: ");
+    fgets(cpf, sizeof(cpf), stdin);
+    cpf[strcspn(cpf, "\n")] = '\0';  // Remove o '\n' no final da string
+
+    // Chama a função para deletar os dados associados ao CPF
+    if (deletar_cpf_no_arquivo(cpf)) {
+        printf("Dados deletados com sucesso.\n");
+    } else {
+        printf("Não foi possível deletar os dados.\n");
+    }
+
+    return 0;
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
     printf("\n");
