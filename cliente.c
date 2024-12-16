@@ -122,13 +122,28 @@ void atualiza_cliente(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                         Atualizar o Cadastro do Cliente                     |\n");
     printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    char cpf[100];
+
+    printf("Digite o CPF do cliente que deseja alterar: ");
+    fgets(cpf, sizeof(cpf), stdin);
+    cpf[strcspn(cpf, "\n")] = '\0';  // Remove o '\n' no final da string
+
+    // Chama a função para buscar e alterar os dados do cliente
+    if (buscar_e_alterar_cpf_no_arquivo(cpf)) {
+        printf("Dados alterados com sucesso.\n");
+    } else {
+        printf("Não foi possível alterar os dados.\n");
+    }
+
+    return 0;
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
     getchar();
     printf("\n");
 }
+
 
 void exclui_cliente(void) {
 
