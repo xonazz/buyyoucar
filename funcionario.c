@@ -148,13 +148,35 @@ void atualiza_funcionario(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                       Atualizar Cadastro do Funcionário                     |\n");
     printf("|                                                                             |\n");
-    printf("| Informe o CPF(Apenas Números):                                              |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    struct Funcionario funcionario;
+
+    // Alocar memória para os dados do funcionário
+    alocar_funcionario(&funcionario);
+
+    // Ler os dados do funcionário
+    ler_funcionario(&funcionario);
+
+    // Exibir os dados lidos
+    exibir_funcionario(&funcionario);
+
+    // Salvar os dados em um arquivo binário
+    salvar_funcionario_binario(&funcionario, "funcionarios.bin");
+
+    // Alterar dados de um funcionário existente (supondo que o CPF seja "12345678901")
+    alterar_funcionario_por_cpf("funcionarios.bin", "12345678901");
+
+    // Liberar a memória alocada
+    liberar_funcionario(&funcionario);
+
+    return 0;
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar(); 
 }  
+
 
 void exclui_funcionario(void) {
     
