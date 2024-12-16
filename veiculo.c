@@ -154,9 +154,19 @@ void exclui_veiculo(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                          Excluir Veículo do Sistema                         |\n");
     printf("|                                                                             |\n");
-    printf("| Informe a Placa:                                                            |\n");
+    printf("| Informe os dados                                                            |\n");
     printf("|                                                                             |\n");
-    printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
+    printf("└─────────────────────────────────────────────────────────────────────────────┘\n"); 
+       char placa_buscar[9];
+
+    printf("Digite a placa do veículo para remover: ");
+    fgets(placa_buscar, sizeof(placa_buscar), stdin);
+    placa_buscar[strcspn(placa_buscar, "\n")] = '\0';  // Remove o caractere '\n'
+
+    // Chama a função para remover o veículo
+    remover_veiculo_por_placa(placa_buscar);
+
+    return 0;
     printf("\n"); 
     printf("\t\t\t>>> Tecle <ENTER> para continuar...\n"); 
     getchar(); 
