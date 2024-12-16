@@ -96,13 +96,21 @@ void pesquisa_cliente(void) {
     printf("┌─────────────────────────────────────────────────────────────────────────────┐\n");
     printf("|                                Pesquisar Cliente                            |\n");
     printf("|                                                                             |\n");
-    printf("| CPF (Apenas Números):                                                       |\n");
+    printf("| Insira os dados:                                                            |\n");
     printf("|                                                                             |\n");
     printf("└─────────────────────────────────────────────────────────────────────────────┘\n");
-    printf("\t\t\t>>> Tecle <ENTER> para continuar...\n");
-    getchar();
-    printf("\n");
+
+    char cpf[100];
+
+    printf("Digite o CPF a ser verificado: ");
+    fgets(cpf, sizeof(cpf), stdin);
+    cpf[strcspn(cpf, "\n")] = '\0';  // Remove o '\n' no final da string
+
+    verificar_cpf_no_arquivo(cpf);  // Chama a função para verificar o CPF e imprimir as informações
+
+    return 0;
 }
+
 
 void atualiza_cliente(void) {
 
