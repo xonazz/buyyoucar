@@ -38,10 +38,10 @@ Para compilar o código do projeto em um sistema Linux, siga as etapas abaixo:
    cd buyyoucar
 5. **Compile o código**:
    ```sh
-   gcc -Wall byc_V5.01.c cliente.c veiculo.c funcionario.c venda.c relatorio.c -o buyyourcar
+   make 
 6. **Execute o programa**:
    ```sh
-   ./buyyourcar
+   make run 
 
  ### Windows 💻
 - **Observação**: O código pode apresentar problemas de compilação na interface do projeto e nas acentuações. Recomenda-se utilizar o **WSL (Windows Subsystem for Linux)**, que permite executar um ambiente Linux diretamente no Windows. Procure no YouTube, em fóruns ou no ChatGPT como instalar e configurar corretamente o WSL. Com o WSL instalado, siga o mesmo passo a passo mencionado acima para Linux.
